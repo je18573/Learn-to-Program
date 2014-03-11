@@ -65,3 +65,23 @@ while true
 		puts 'NO, NOT SINCE ' + rand_year.to_s + '!'
 	end
 end
+
+#4 Leap years.
+puts 'Leaf years! '
+puts 'Please Enter Starting Year: ' 
+starting_year = gets.chomp.to_i
+puts 'Please Enter Ending Year: '
+ending_year = gets.chomp.to_i
+
+now_year = starting_year
+
+while now_year <= ending_year 
+
+	if now_year%4 == 0 
+		if now_year%400 == 0 || now_year%100 !=0 
+			puts now_year
+		end
+	end
+			
+	now_year = now_year + 1
+end
