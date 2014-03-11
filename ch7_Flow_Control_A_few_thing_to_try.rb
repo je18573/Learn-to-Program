@@ -39,3 +39,29 @@ while true
 	end
 			
 end
+
+#3 Deaf grandma extendes. Say three times 'BYE'
+puts 'Speaking to grandma: '
+bye_cnt = 0
+
+while true
+	answer = gets.chomp
+
+	if answer == 'BYE'
+		bye_cnt = bye_cnt + 1
+	else
+		bye_cnt = 0
+	end
+
+	if bye_cnt >= 3
+		puts 'BYE'
+		break
+	end
+
+	if answer != answer.upcase
+		puts 'HUH?! SPEAL UP, SONNY!'
+	else
+		rand_year = 1930 + rand(21)
+		puts 'NO, NOT SINCE ' + rand_year.to_s + '!'
+	end
+end
