@@ -19,3 +19,23 @@ while now_num > -1
 
 end
 
+#2 Deaf grandma.
+
+puts 'Speaking to grandma: '
+
+while true
+	answer = gets.chomp
+
+	if answer == 'BYE'
+		puts 'BYE'
+		break
+	end
+
+	if answer != answer.upcase
+		puts 'HUH?! SPEAL UP, SONNY!'
+	else
+		rand_year = 1930 + rand(21)
+		puts 'NO, NOT SINCE ' + rand_year.to_s + '!'
+	end
+			
+end
