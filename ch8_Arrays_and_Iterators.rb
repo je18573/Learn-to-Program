@@ -64,3 +64,78 @@ puts favarites.length
 puts favarites.pop
 puts favarites
 puts favarites.length
+
+# 8.3 A Few Things to Try
+#1 Building and sorting an array
+puts 'Give me some words, and I\'ll sort them: '
+sortwords = []
+
+while true
+	sortword = gets.chomp
+	if sortword == ''
+		break
+	end
+	sortwords.push sortword
+end
+
+puts 'Here they are, sorting '
+puts sortwords.sort
+#1 Answer another method
+puts 'Give me some words, and I will sort them:'
+words = []
+
+while true
+	word = gets.chomp
+	break if word.empty?
+
+	words << word
+end
+
+puts 'Sweet! Here they are, sorted:'
+puts words.sort
+
+#2 Table of contents, revisited.
+title 	 = '====== Table of Contents ======='
+chapters = [
+						['Getting Started', 1],
+						['Numbers', 				9],
+						['letters', 			 13]
+				 	 ]
+puts title.center(50)
+puts
+
+chap_number = 1
+
+chapters.each do |chap|
+	chap_name = chap[0]
+	chap_page = chap[1]
+
+	beginning = 'Chapter ' + chap_number.to_s + ': ' + chap_name
+	ending 		= 'page ' + chap_page.to_s
+
+	puts beginning.ljust(30) + ending.rjust(20)
+	chap_number = chap_number + 1
+end
+#2 another method
+puts
+title = 'Table of Contents'
+chapters = [
+						['Getting Started', 1],
+						['Numbers', 				9],
+						['letters', 			 13]
+				 	 ]
+puts title.center(50)
+puts
+chapters.each_with_index do |chap, idx|
+	chap_name, chap_page = chap
+	chap_number = idx + 1
+
+	beginning = "Chapter #{chap_number}: #{chap_name}"
+	ending 		= "page #{chap_page}"
+
+	puts beginning.ljust(30) + ending.rjust(20)	
+end
+
+
+
+
